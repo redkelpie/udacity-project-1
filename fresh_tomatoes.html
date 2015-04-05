@@ -8,7 +8,22 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <style type="text/css" media="screen">
+    <script type="text/javascript" src="js/tipped/tipped.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tipped/tipped.css" />
+
+    <script type='text/javascript'>
+    $(document).ready(function() {
+      Tipped.create('.boxes .box',{
+          size: 'large',
+          containment: {
+              selector: '.box',
+              padding: 0
+            }
+          }
+      );
+    });
+    </script>
+        <style type="text/css" media="screen">
         body {
             padding-top: 80px;
         }
@@ -120,19 +135,23 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container boxes">
       
 <div class="col-md-6 col-lg-4 movie-wrap text-center">
-    <div class="movie-tile" data-trailer-youtube-id="None" data-toggle="modal" data-target="#trailer">
+    <div class="movie-tile" data-trailer-youtube-id="lQKs169Sl0I" data-toggle="modal" data-target="#trailer">
         <img src="http://ia.media-imdb.com/images/M/MV5BMTQ2NzkzMDI4OF5BMl5BanBnXkFtZTcwMDA0NzE1NA@@._V1_SX640_SY720_.jpg" width="220" height="342">
         <h2>Silence of the Lambs</h2>
     </div>
-    <p><a class="more">More Info +</a></p>
-    <div class="more-info closed">
-        <p>Rating: R </p>
+ 
+    <div class='box' title="<p>Rating: R</p>
         <p>Genre: Drama </p>
-        <p>Reviewed by: Sara Bells</p>
-        <p><em>"My twin boys love this movie and I love the way it teaches a lesson about nature"</em></p>
+        <p>Reviewer: Kathleen Carrol</p>
+        <p>Recommended Audience: Adults</p>
+        <p>Review: The movie, scary and graphic to cause timid souls (such as this writer) to close their eyes at certain points, has a vise-like grip on the audience.</p>" data-tipped-options="position: 'top'">
+       <p>More Info</br><img src="info.png" height="30px" width="30px"</p>
+       <div class='position topleft'><i></i></div>
+       <div class='overlay'></div>
+ 
     </div>  
 </div>
 
@@ -141,68 +160,88 @@
         <img src="http://ia.media-imdb.com/images/M/MV5BMTQyNTk4NzAyMF5BMl5BanBnXkFtZTcwMTM2ODE0MQ@@._V1_SX214_AL_.jpg" width="220" height="342">
         <h2>Host</h2>
     </div>
-    <p><a class="more">More Info +</a></p>
-    <div class="more-info closed">
-        <p>Rating: R </p>
+ 
+    <div class='box' title="<p>Rating: R</p>
         <p>Genre: Drama </p>
-        <p>Reviewed by: Sara Bells</p>
-        <p><em>"My twin boys love this movie and I love the way it teaches a lesson about nature"</em></p>
+        <p>Reviewer: Luke Goodsell</p>
+        <p>Recommended Audience: Adults</p>
+        <p>Review: Joon-ho Bong's The Host is a very different kettle of mutated fish. </p>" data-tipped-options="position: 'top'">
+       <p>More Info</br><img src="info.png" height="30px" width="30px"</p>
+       <div class='position topleft'><i></i></div>
+       <div class='overlay'></div>
+ 
     </div>  
 </div>
 
 <div class="col-md-6 col-lg-4 movie-wrap text-center">
-    <div class="movie-tile" data-trailer-youtube-id="None" data-toggle="modal" data-target="#trailer">
+    <div class="movie-tile" data-trailer-youtube-id="I2OHc4OvjVc" data-toggle="modal" data-target="#trailer">
         <img src="http://ia.media-imdb.com/images/M/MV5BNDMyOTMzMjc0NV5BMl5BanBnXkFtZTcwNDc4MzEzMQ@@._V1_SX640_SY720_.jpg" width="220" height="342">
-        <h2>FernGully</h2>
+        <h2>Ferngully</h2>
     </div>
-    <p><a class="more">More Info +</a></p>
-    <div class="more-info closed">
-        <p>Rating: G </p>
+ 
+    <div class='box' title="<p>Rating: G</p>
         <p>Genre: Childrens </p>
-        <p>Reviewed by: Sara Bells</p>
-        <p><em>"My twin boys love this movie and I love the way it teaches a lesson about nature"</em></p>
+        <p>Reviewer: Scott Weinberg</p>
+        <p>Recommended Audience: Children</p>
+        <p>Review: Hey, if the Veggie Tales folks can sell religion in this fashion, then I say the environmental lobby deserves their fair shot as well.</p>" data-tipped-options="position: 'top'">
+       <p>More Info</br><img src="info.png" height="30px" width="30px"</p>
+       <div class='position topleft'><i></i></div>
+       <div class='overlay'></div>
+ 
     </div>  
 </div>
 
 <div class="col-md-6 col-lg-4 movie-wrap text-center">
-    <div class="movie-tile" data-trailer-youtube-id="None" data-toggle="modal" data-target="#trailer">
+    <div class="movie-tile" data-trailer-youtube-id="U8LO9hRL3fQ" data-toggle="modal" data-target="#trailer">
         <img src="http://ia.media-imdb.com/images/M/MV5BMjAyNTE4NDU2Nl5BMl5BanBnXkFtZTcwNTgyNjQyMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg" width="220" height="342">
         <h2>Homeward Bound</h2>
     </div>
-    <p><a class="more">More Info +</a></p>
-    <div class="more-info closed">
-        <p>Rating: PG </p>
+ 
+    <div class='box' title="<p>Rating: PG</p>
         <p>Genre: Childrens </p>
-        <p>Reviewed by: Sara Bells</p>
-        <p><em>"My twin boys love this movie and I love the way it teaches a lesson about nature"</em></p>
+        <p>Reviewer: Brian Lowry</p>
+        <p>Recommended Audience: Children</p>
+        <p>Review:  A sprightly little entertainment that should enthrall tots without straining the patience of their parents.</p>" data-tipped-options="position: 'top'">
+       <p>More Info</br><img src="info.png" height="30px" width="30px"</p>
+       <div class='position topleft'><i></i></div>
+       <div class='overlay'></div>
+ 
     </div>  
 </div>
 
 <div class="col-md-6 col-lg-4 movie-wrap text-center">
-    <div class="movie-tile" data-trailer-youtube-id="None" data-toggle="modal" data-target="#trailer">
+    <div class="movie-tile" data-trailer-youtube-id="4S9a5V9ODuY" data-toggle="modal" data-target="#trailer">
         <img src="http://ia.media-imdb.com/images/M/MV5BNDMyOTMzMjc0NV5BMl5BanBnXkFtZTcwNDc4MzEzMQ@@._V1_SX640_SY720_.jpg" width="220" height="342">
         <h2>Hunger Games</h2>
     </div>
-    <p><a class="more">More Info +</a></p>
-    <div class="more-info closed">
-        <p>Rating: PG-13 </p>
+ 
+    <div class='box' title="<p>Rating: PG-13</p>
         <p>Genre: Action </p>
-        <p>Reviewed by: Sara Bells</p>
-        <p><em>"My twin boys love this movie and I love the way it teaches a lesson about nature"</em></p>
+        <p>Reviewer: David Keyes</p>
+        <p>Recommended Audience: Teens</p>
+        <p>Review:  Has all the technical ingredients of a great (and even important) film, but sideswipes them in order to leave the audience feeling like that they have been abandoned in the wilderness of extreme cruelty. </p>" data-tipped-options="position: 'top'">
+       <p>More Info</br><img src="info.png" height="30px" width="30px"</p>
+       <div class='position topleft'><i></i></div>
+       <div class='overlay'></div>
+ 
     </div>  
 </div>
 
 <div class="col-md-6 col-lg-4 movie-wrap text-center">
-    <div class="movie-tile" data-trailer-youtube-id="None" data-toggle="modal" data-target="#trailer">
+    <div class="movie-tile" data-trailer-youtube-id="0vS0E9bBSL0" data-toggle="modal" data-target="#trailer">
         <img src="http://upload.wikimedia.org/wikipedia/en/c/c7/Memento_poster.jpg" width="220" height="342">
-        <h2>Momento</h2>
+        <h2>Memento</h2>
     </div>
-    <p><a class="more">More Info +</a></p>
-    <div class="more-info closed">
-        <p>Rating: R </p>
+ 
+    <div class='box' title="<p>Rating: R</p>
         <p>Genre: Suspense </p>
-        <p>Reviewed by: Sara Bells</p>
-        <p><em>"My twin boys love this movie and I love the way it teaches a lesson about nature"</em></p>
+        <p>Reviewer: Joe Morgenstern</p>
+        <p>Recommended Audience: Adults</p>
+        <p>Review:  I can't remember when a movie has seemed so clever, strangely affecting and slyly funny at the very same time. </p>" data-tipped-options="position: 'top'">
+       <p>More Info</br><img src="info.png" height="30px" width="30px"</p>
+       <div class='position topleft'><i></i></div>
+       <div class='overlay'></div>
+ 
     </div>  
 </div>
 

@@ -29,17 +29,18 @@ class Video():
 
         # associate reviews with the title
         self.reviews = reviews.return_review(title)
-
+        
     # Predict audience based on genre and rating
-    def audience(self):
-       AUDIENCE = ["Children","Teens","Adults"]
-       if self.rating == "G" | self.rating == "PG":
-           self.audience = AUDIENCE[0]
-       if self.rating == "PG-13" | self.rating == "R":
-           if self.genre == "Drama" | self.genre == "Suspense":
-               self.audience = AUDIENCE[2]
+    def audience_recommendation(self):
+        AUDIENCE = ["Children","Teens","Adults"]
+        if self.rating == "G" or self.rating == "PG":
+           audience = AUDIENCE[0]
+        if self.rating == "PG-13" or self.rating == "R":
+           if self.genre == "Drama" or self.genre == "Suspense":
+               audience = AUDIENCE[2]
            if self.genre == "Action":
-               self.audience = AUDIENCE[1]
+               audience = AUDIENCE[1]
+        return audience
            
 
     def play_trailer(self):

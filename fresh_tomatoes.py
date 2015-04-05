@@ -13,7 +13,22 @@ main_page_head = '''
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <style type="text/css" media="screen">
+    <script type="text/javascript" src="js/tipped/tipped.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tipped/tipped.css" />
+
+    <script type='text/javascript'>
+    $(document).ready(function() {
+      Tipped.create('.boxes .box',{
+          size: 'large',
+          containment: {
+              selector: '.box',
+              padding: 0
+            }
+          }
+      );
+    });
+    </script>
+        <style type="text/css" media="screen">
         body {
             padding-top: 80px;
         }
@@ -128,7 +143,7 @@ main_page_content = '''
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container boxes">
       {movie_tiles}
     </div>
   </body>
@@ -142,12 +157,16 @@ movie_tile_content = '''
         <img src="{poster_image_url}" width="220" height="342">
         <h2>{movie_title}</h2>
     </div>
-    <p><a class="more">More Info +</a></p>
-    <div class="more-info closed">
-        <p>Rating: {rating} </p>
+ 
+    <div class='box' title="<p>Rating: {rating}</p>
         <p>Genre: {genre} </p>
-        <p>Reviewed by: {reviewer}</p>
-        <p><em>"{review}"</em></p>
+        <p>Reviewer: {name}</p>
+        <p>Recommended Audience: {audience}</p>
+        <p>Review: {text}</p>" data-tipped-options="position: 'top'">
+       <p>More Info</br><img src="info.png" height="30px" width="30px"</p>
+       <div class='position topleft'><i></i></div>
+       <div class='overlay'></div>
+ 
     </div>  
 </div>
 '''
@@ -159,7 +178,7 @@ def create_movie_tiles_content(movies):
         # Extract the youtube ID from the url
         youtube_id_match = re.search(r'(?<=v=)[^&#]+', movie.trailer_youtube_url)
         youtube_id_match = youtube_id_match or re.search(r'(?<=be/)[^&#]+', movie.trailer_youtube_url)
-        trailer_youtube_id = youtube_id_match.group(0) if youtube_id_match else None
+        trailer_youtube_id = youtube_id_match.group(0) if youtube_id_match else None        
         
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
@@ -168,8 +187,9 @@ def create_movie_tiles_content(movies):
             trailer_youtube_id=trailer_youtube_id,
             rating=movie.rating,
             genre=movie.genre,
-            reviewer=movie.reviews[0],
-            review=movie.reviews[1]
+            name = movie.reviews[0],
+            text = movie.reviews[1],
+            audience = movie.audience_recommendation(),
         )
     return content
 
