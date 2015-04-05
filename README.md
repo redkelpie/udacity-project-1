@@ -9,11 +9,11 @@ GENERAL USAGE NOTES
 
 REQUIREMENTS
 ------------
-- Python v 2.7 is required to run this application
+- Python v 2.7.9 is required to run this application
 
 RUNNING FRESH TOMATOES
 ----------------------
-To run the Fresh Tomatoes application, open the movies.py file with IDLE (python v. 2.7).  A browser window will open displaying the contents of the movie data stored in the movies.py file
+To run the Fresh Tomatoes application, open the movies.py file with IDLE (python v. 2.7.9) and execute it by running it.  A browser window will open displaying the contents of the movie data stored in the movies.py file in a webpage.
 
 ADDING ADDITIONAL MOVIES
 ------------------------
